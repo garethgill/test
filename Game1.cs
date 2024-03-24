@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Project1
 {
@@ -14,8 +15,13 @@ namespace Project1
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            string Game1Status = "true";
         }
 
+        public static void TextOut()
+        {
+            Console.WriteLine("exiting");
+        }
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
@@ -42,7 +48,7 @@ namespace Project1
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Yellow);
 
             // TODO: Add your drawing code here
 
